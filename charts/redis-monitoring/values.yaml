@@ -1,17 +1,14 @@
 image:
   name: redis-monitoring-service
-  tag: 1.0.0
-
+  tag: 1.1.1
 network:
   port: 80
   ingress:
     activeHost: "vd-devops-tests.com"
     previewHost: "preview.vd-devops-tests.com"
-
 rollout:
   autoPromotionEnabled: false
   scaleDownDelaySeconds: 30
-
 resources:
   requests:
     cpu: "10m"
@@ -19,7 +16,6 @@ resources:
   limits:
     cpu: "200m"
     memory: "256Mi"
-
 hpa:
   enabled: true
   minReplicas: 1
